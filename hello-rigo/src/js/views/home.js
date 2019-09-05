@@ -35,7 +35,9 @@ export class Home extends React.Component {
 									Remember Me
 								</div>
 								<div className="form-group">
-									<input type="submit" value="Login" className="btn float-right login_btn" />
+									<Link to="/PickTeam">
+										<input type="submit" value="Login" className="btn float-right login_btn" />
+									</Link>
 								</div>
 							</form>
 						</div>
