@@ -4,10 +4,6 @@ import { Context } from "../store/appContext";
 
 export class PickTeam extends React.Component {
 	render() {
-		return (
-			<div className="body">
-				<p>hello</p>
-			</div>
-		);
+		return <div className="body" />;
 	}
 }

@@ -1,12 +1,13 @@
 import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
+
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 export class Home extends React.Component {
 	render() {
 		return (
-			<div className="container">
+			<div className="container home">
 				<div className="d-flex justify-content-center h-100">
 					<div className="card">
 						<div className="card-header">
