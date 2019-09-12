@@ -1,7 +1,7 @@
 import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
-
+import "../../styles/index.scss";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 export class Home extends React.Component {
