@@ -1,46 +1,92 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import { Context } from "../store/appContext";
+import PropTypes from "prop-types";
 
 import "../../styles/demo.scss";
-
 export class Demo extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			full_name: null,
+			email: null,
+			screen_name: null,
+			password: null
+		};
+	}
+
 	render() {
 		return (
-			<div className="container">
-				<div className="d-flex justify-content-center h-100">
-					<div className="card">
-						<div className="card-header">
-							<h3>Sign Up</h3>
+			<Context.Consumer>
+				{({ store, actions }) => {
+					return (
+						<div className="container">
+							<div className="d-flex justify-content-center h-100">
+								<div className="card">
+									<div className="card-header">
+										<h3>Sign Up</h3>
+									</div>
+									<div className="card-body">
+										<form>
+											<div className="input-group form-group">
+												<input
+													type="text"
+													className="form-control"
+													placeholder="full name"
+													onChange={e => this.setState({ full_name: e.target.value })}
+												/>
+											</div>
+											<div className="input-group form-group">
+												<input
+													type="text"
+													className="form-control"
+													placeholder="email"
+													onChange={e => this.setState({ email: e.target.value })}
+												/>
+											</div>
+											<div className="input-group form-group">
+												<input
+													type="text"
+													className="form-control"
+													placeholder="screen name"
+													onChange={e => this.setState({ screen_name: e.target.value })}
+												/>
+											</div>
+											<div className="input-group form-group">
+												<input
+													type="text"
+													className="form-control"
+													placeholder="set up a password"
+													onChange={e => this.setState({ password: e.target.value })}
+												/>
+											</div>
+											<div />
+											<div className="form-group">
+												<input
+													onClick={() => {
+														actions.addContact(this.state, this.props.history);
+													}}
+													type="submit"
+													value="Sign Up"
+													className="btn float-right login_btn"
+												/>
+											</div>
+										</form>
+									</div>
+									<div className="card-footer">
+										<div className="d-flex justify-content-center links" />
+										<div className="d-flex justify-content-center" />
+									</div>
+								</div>
+							</div>
 						</div>
-						<div className="card-body">
-							<form>
-								<div className="input-group form-group">
-									<input type="text" className="form-control" placeholder="first name" />
-								</div>
-								<div className="input-group form-group">
-									<input type="text" className="form-control" placeholder="last name" />
-								</div>
-								<div className="input-group form-group">
-									<input type="text" className="form-control" placeholder="email address" />
-								</div>
-								<div className="input-group form-group">
-									<input type="text" className="form-control" placeholder="set up a password" />
-								</div>
-								<div />
-								<div className="form-group">
-									<input type="submit" value="Sign Up" className="btn float-right login_btn" />
-								</div>
-							</form>
-						</div>
-						<div className="card-footer">
-							<div className="d-flex justify-content-center links" />
-							<div className="d-flex justify-content-center" />
-						</div>
-					</div>
-				</div>
-			</div>
+					);
+				}}
+			</Context.Consumer>
 		);
 	}
 }
+
+Demo.propTypes = {
+	history: PropTypes.object
+};
