@@ -8,7 +8,7 @@ import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import { PickTeam } from "./views/pickTeam";
 import injectContext from "./store/appContext";
-
+import { juventusGame } from "./views/juventusGame";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
@@ -28,6 +28,7 @@ export class Layout extends React.Component {
 							<Route exact path="/home" component={Home} />
 							<Route exact path="/demo" component={Demo} />
 							<Route exact path="/PickTeam" component={PickTeam} />
+							<Route exact path="/juventusGame" component={juventusGame} />
 							<Route exact path="/single/:theid" component={Single} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>

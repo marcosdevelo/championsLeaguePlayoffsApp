@@ -11,13 +11,15 @@ export class PickTeam extends React.Component {
 				<Carousel>
 					<Carousel.Item>
 						<div className="carousel">
-							<img
-								className="d-block"
-								src="https://vignette.wikia.nocookie.net/logopedia/images/5/50/600px-Juventusstemma.png/revision/latest?cb=20120107135132"
-								alt="First slide"
-								width="225"
-								height="228"
-							/>
+							<Link to="/juventusGame">
+								<img
+									className="d-block"
+									src="https://vignette.wikia.nocookie.net/logopedia/images/5/50/600px-Juventusstemma.png/revision/latest?cb=20120107135132"
+									alt="First slide"
+									width="225"
+									height="228"
+								/>
+							</Link>
 							<Carousel.Caption>
 								<h3>First slide label</h3>
 							</Carousel.Caption>
