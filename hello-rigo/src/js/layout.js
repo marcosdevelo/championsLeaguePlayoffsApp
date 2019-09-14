@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
+import { LandingPage } from "./views/landingPage";
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
@@ -23,10 +24,11 @@ export class Layout extends React.Component {
 				<BrowserRouter basename={basename}>
 					<ScrollToTop>
 						<Switch>
-							<Route exact path="/" component={Home} />
-							<Route path="/demo" component={Demo} />
-							<Route path="/PickTeam" component={PickTeam} />
-							<Route path="/single/:theid" component={Single} />
+							<Route exact path="/" component={LandingPage} />
+							{/* <Route exact path="/" component={Home} /> */}
+							<Route exact path="/demo" component={Demo} />
+							<Route exact path="/PickTeam" component={PickTeam} />
+							<Route exact path="/single/:theid" component={Single} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
 					</ScrollToTop>
