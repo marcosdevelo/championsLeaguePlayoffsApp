@@ -56,6 +56,20 @@ export class LandingPage extends React.Component {
 								height="40"
 								alt="React Bootstrap logo"
 							/>
+							<img
+								src="https://vignette.wikia.nocookie.net/logopedia/images/4/49/Liverpool_FC_logo_%28introduced_2012%29.svg/revision/latest/scale-to-width-down/130?cb=20120705223744"
+								className="d-inline-block align-top"
+								width="23"
+								height="40"
+								alt="React Bootstrap logo"
+							/>
+							<img
+								src="https://vignette.wikia.nocookie.net/logopedia/images/3/36/Manchester_City_2016.png/revision/latest/scale-to-width-down/200?cb=20151229013856"
+								className="d-inline-block align-top"
+								width="23"
+								height="40"
+								alt="React Bootstrap logo"
+							/>
 						</Navbar.Brand>
 					</Navbar>
 				</div>

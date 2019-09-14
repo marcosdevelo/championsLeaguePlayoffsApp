@@ -64,9 +64,9 @@ export class Demo extends React.Component {
 											<div className="form-group">
 												<input
 													onClick={() => {
-														actions.addContact(this.state, this.props.history);
+														actions.signup(this.state, this.props.history);
 													}}
-													type="submit"
+													type="button"
 													value="Sign Up"
 													className="btn float-right login_btn"
 												/>
