@@ -7,6 +7,7 @@ const getState = ({ getStore, setStore }) => {
 			player: [
 				{
 					id: 1,
+					name: "Lionel Messi",
 					position: "attacker",
 					image: "https://www.futsalescocia.co.uk/wp-content/uploads/2018/04/CvN7lx1W8AA3vIu.jpg",
 					attack: "50",
@@ -22,6 +23,7 @@ const getState = ({ getStore, setStore }) => {
 
 				{
 					id: 2,
+					name: "Sergi Roberto",
 					position: "midfielder",
 					image: "https://headbandsandheartbreak.files.wordpress.com/2013/10/sergi-roberto-2.jpg",
 					attack: "40",
@@ -37,6 +39,7 @@ const getState = ({ getStore, setStore }) => {
 
 				{
 					id: 3,
+					name: "Jordi Alba",
 					position: "defender",
 					image: "https://www.thesportsdb.com/images/media/player/thumb/xayer11514552889.jpg",
 					attack: "30",
