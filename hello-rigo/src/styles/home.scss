@@ -5,7 +5,20 @@ background-repeat: no-repeat;
 height: 100%;
 font-family: 'Numans', sans-serif;
 }
+.carousel{
+max-width: 258px;
+margin: auto;
+    margin-top: 93px;
 
+}
+.d-block-real{
+    margin-left: 44px;
+    width: 170px;
+    padding-bottom: 8px;
+}
+.d-block{
+    margin-left: 15px;
+}
 .container{
 height: 100%;
 align-content: center;
@@ -83,10 +96,17 @@ color: white;
 .links a{
 margin-left: 4px;
 }
-.body,html{
+
+.tarjetas{
         background-image: url('https://ichef.bbci.co.uk/news/720/cpsprodpb/238D/production/_95410190_gettyimages-488144002.jpg');
-    height: 100%;
+    //width: 200px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+     width: 100%;
+    height: 100%;
+    margin: auto;
+
+
 }

@@ -44,9 +44,7 @@ export class Home extends React.Component {
 						</div>
 						<div className="card-footer">
 							<div className="d-flex justify-content-center links">
-								<Link to="/demo">
-									<a href="#">Sign Up</a>
-								</Link>
+								<Link to="/demo">Sign Up</Link>
 							</div>
 							<div className="d-flex justify-content-center">
 								<a href="#">Forgot your password?</a>
