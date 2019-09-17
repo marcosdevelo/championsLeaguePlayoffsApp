@@ -16,14 +16,14 @@ export class juventusGame extends React.Component {
 						width="225"
 						height="228"
 					/>
-					<div className="container">
-						<div className="row">
+					<div className="wrapper">
+						<div className="Row">
 							<Context.Consumer>
 								{({ store, actions }) => {
 									return store.player.map((item, index) => {
 										return (
 											<div key={index} className="col-2">
-												<div className="card text-center">
+												<div className="cardPlayer">
 													<div className="card-header">{item.name}</div>
 													<img src={item.image} alt="Smiley face" height="75" width="75" />
 													<div className="card-body">
@@ -31,7 +31,14 @@ export class juventusGame extends React.Component {
 														<div>{item.attack}</div>
 														<div>{item.defense}</div>
 													</div>
-													<div className="card-footer">{item.season}</div>
+													<div className="card-footer">
+														<button type="button" className="btn btn-danger">
+															ATTK
+														</button>
+														<button type="button" className="btn btn-primary">
+															DEF
+														</button>
+													</div>
 												</div>
 											</div>
 										);
