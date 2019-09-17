@@ -16,25 +16,30 @@ export class juventusGame extends React.Component {
 						width="225"
 						height="228"
 					/>
-
-					<Context.Consumer>
-						{({ store, actions }) => {
-							return store.player.map((item, index) => {
-								return (
-									<div key={index} className="card text-center">
-										<div className="card-header">{item.name}</div>
-										<div className="card-body">
-											<img src={item.image} alt="Smiley face" height="42" width="42" />
-											{item.position}
-											{item.attack}
-											{item.defense}
-										</div>
-										<div className="card-footer">{item.season}</div>
-									</div>
-								);
-							});
-						}}
-					</Context.Consumer>
+					<div className="container">
+						<div className="row">
+							<Context.Consumer>
+								{({ store, actions }) => {
+									return store.player.map((item, index) => {
+										return (
+											<div key={index} className="col-2">
+												<div className="card text-center">
+													<div className="card-header">{item.name}</div>
+													<img src={item.image} alt="Smiley face" height="75" width="75" />
+													<div className="card-body">
+														<div>{item.position}</div>
+														<div>{item.attack}</div>
+														<div>{item.defense}</div>
+													</div>
+													<div className="card-footer">{item.season}</div>
+												</div>
+											</div>
+										);
+									});
+								}}
+							</Context.Consumer>
+						</div>
+					</div>
 				</div>
 			</React.Fragment>
 		);

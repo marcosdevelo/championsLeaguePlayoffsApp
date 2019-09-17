@@ -7,12 +7,13 @@ const getState = ({ getStore, setStore }) => {
 			player: [
 				{
 					id: 1,
-					name: "Lionel Messi",
+					name: "Cristiano Ronaldo",
 					position: "attacker",
-					image: "https://www.futsalescocia.co.uk/wp-content/uploads/2018/04/CvN7lx1W8AA3vIu.jpg",
-					attack: "50",
-					defense: "30",
-					player_id: "154",
+					image:
+						"https://images2.gazzettaobjects.it/methode_image/2018/12/10/Calcio/Foto%20Calcio%20-%20Trattate/31.0.1012834460-0050-U2021820495617iD-U3101123990664zRD-620x349@Gazzetta-Web_articolo.jpg?v=201812101702",
+					attack: "Attack 50",
+					defense: "Defense 30",
+					player_id: "874",
 					season: "2019-2020",
 					goals_total: "6",
 					passes_total: "150",
@@ -23,12 +24,12 @@ const getState = ({ getStore, setStore }) => {
 
 				{
 					id: 2,
-					name: "Sergi Roberto",
-					position: "midfielder",
-					image: "https://headbandsandheartbreak.files.wordpress.com/2013/10/sergi-roberto-2.jpg",
-					attack: "40",
-					defense: "40",
-					player_id: "137",
+					name: "Miralem Pjanic",
+					position: "Position: midfielder",
+					image: "https://m.media-amazon.com/images/I/81IG6OK-2yL._SS500_.jpg ",
+					attack: "attack: 40",
+					defense: "Defense: 40",
+					player_id: "872",
 					season: "2019-2020",
 					goals_total: "1",
 					passes_total: "170",
@@ -39,11 +40,11 @@ const getState = ({ getStore, setStore }) => {
 
 				{
 					id: 3,
-					name: "Jordi Alba",
-					position: "defender",
-					image: "https://www.thesportsdb.com/images/media/player/thumb/xayer11514552889.jpg",
-					attack: "30",
-					defense: "45",
+					name: "Leonardo Bonucci",
+					position: "Position: defender",
+					image: "https://www.soccerpro.com/wp-content/uploads/2018/02/cban_Bonucci.jpg",
+					attack: "Attack: 30",
+					defense: "Defense: 45",
 					player_id: "128",
 					season: "2019-2020",
 					goals_total: "0",
@@ -51,54 +52,54 @@ const getState = ({ getStore, setStore }) => {
 					tackles_total: "6",
 					shots_total: "0",
 					goals_conceded: "2"
-				},
-
-				{
-					id: 4,
-					position: "attacker",
-					image:
-						"https://ssio.azurewebsites.net/x500,q75,jpeg/http://supersport-img.azureedge.net/2019/8/Eden-Hazard-inaction-190811G1050.jpg",
-					attack: "47",
-					defense: "30",
-					player_id: "2296",
-					season: "2019-2020",
-					goals_total: "5",
-					passes_total: "120",
-					tackles_total: "4",
-					shots_total: "6",
-					goals_conceded: "1"
-				},
-
-				{
-					id: 5,
-					position: "midfielder",
-					image: "http://eastbridge-sb.com/wp-content/uploads/2018/10/Casemiro-500x500.jpg",
-					attack: "40",
-					defense: "48",
-					player_id: "747",
-					season: "2019-2020",
-					goals_total: "1",
-					passes_total: "155",
-					tackles_total: "8",
-					shots_total: "3",
-					goals_conceded: "1"
-				},
-
-				{
-					id: 6,
-					position: "defeder",
-					image:
-						"https://www.realmadrid.com/en/special-features/shirts-and-kits/assets/images/content/milestones/2013/hitodeportivo13.jpg",
-					attack: "38",
-					defense: "50",
-					player_id: "747",
-					season: "2019-2020",
-					goals_total: "0",
-					passes_total: "145",
-					tackles_total: "9",
-					shots_total: "1",
-					goals_conceded: "1"
 				}
+
+				//  {
+				// 	id: 4,
+				// 	position: "attacker",
+				// 	image:
+				// 		"https://ssio.azurewebsites.net/x500,q75,jpeg/http://supersport-img.azureedge.net/2019/8/Eden-Hazard-inaction-190811G1050.jpg",
+				// 	attack: "47",
+				// 	defense: "30",
+				// 	player_id: "2296",
+				// 	season: "2019-2020",
+				// 	goals_total: "5",
+				// 	passes_total: "120",
+				// 	tackles_total: "4",
+				// 	shots_total: "6",
+				// 	goals_conceded: "1"
+				// },
+
+				// {
+				// 	id: 5,
+				// 	position: "midfielder",
+				// 	image: "http://eastbridge-sb.com/wp-content/uploads/2018/10/Casemiro-500x500.jpg",
+				// 	attack: "40",
+				// 	defense: "48",
+				// 	player_id: "747",
+				// 	season: "2019-2020",
+				// 	goals_total: "1",
+				// 	passes_total: "155",
+				// 	tackles_total: "8",
+				// 	shots_total: "3",
+				// 	goals_conceded: "1"
+				// },
+
+				// {
+				// 	id: 6,
+				// 	position: "defeder",
+				// 	image:
+				// 		"https://www.realmadrid.com/en/special-features/shirts-and-kits/assets/images/content/milestones/2013/hitodeportivo13.jpg",
+				// 	attack: "38",
+				// 	defense: "50",
+				// 	player_id: "747",
+				// 	season: "2019-2020",
+				// 	goals_total: "0",
+				// 	passes_total: "145",
+				// 	tackles_total: "9",
+				// 	shots_total: "1",
+				// 	goals_conceded: "1"
+				// }
 			]
 		},
 
