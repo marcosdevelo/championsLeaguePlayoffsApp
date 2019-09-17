@@ -4,18 +4,12 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/pickteam.scss";
 
-export class juventusGame extends React.Component {
+export class barcelonaGame extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
 				<div className="tarjetas">
-					<img
-						className="d-block"
-						src="https://vignette.wikia.nocookie.net/logopedia/images/5/50/600px-Juventusstemma.png/revision/latest?cb=20120107135132"
-						alt="First slide"
-						width="225"
-						height="228"
-					/>
+					<img className="d-block" src="" alt="First slide" width="225" height="228" />
 
 					<Context.Consumer>
 						{({ store, actions }) => {

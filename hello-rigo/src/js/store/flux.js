@@ -62,7 +62,9 @@ const getState = ({ getStore, setStore }) => {
 						console.log("Icoming users: ", data);
 						setStore({ players: data });
 					});
-			}
+			},
+			fightToPlayers(p1, p2) {}
+
 			// Use getActions to call a function within a fuction
 		}
 	};

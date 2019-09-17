@@ -21,23 +21,23 @@ export class PickTeam extends React.Component {
 								/>
 							</Link>
 							<Carousel.Caption>
-								<h3>First slide label</h3>
+								<h3 />
 							</Carousel.Caption>
 						</div>
 					</Carousel.Item>
 					<Carousel.Item>
 						<div className="carousel">
-							<img
-								className="d-block "
-								src="https://vignette.wikia.nocookie.net/logopedia/images/4/47/FC_Barcelona_%28crest%29.svg/revision/latest/scale-to-width-down/200?cb=20190425113731"
-								alt="Third slide"
-								width="225"
-								height="228"
-							/>
-
+							<Link to="/barcelonaGame">
+								<img
+									className="d-block "
+									src="https://vignette.wikia.nocookie.net/logopedia/images/4/47/FC_Barcelona_%28crest%29.svg/revision/latest/scale-to-width-down/200?cb=20190425113731"
+									alt="Third slide"
+									width="225"
+									height="228"
+								/>
+							</Link>
 							<Carousel.Caption>
-								<h3>Second slide label</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+								<h3 />
 							</Carousel.Caption>
 						</div>
 					</Carousel.Item>
