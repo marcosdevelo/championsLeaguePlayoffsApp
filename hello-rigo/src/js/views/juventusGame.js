@@ -20,7 +20,7 @@ export class juventusGame extends React.Component {
 						<div className="Row">
 							<Context.Consumer>
 								{({ store, actions }) => {
-									return store.player.map((item, index) => {
+									return store.players.map((item, index) => {
 										return (
 											<div key={index} className="col-2">
 												<div className="cardPlayer">
