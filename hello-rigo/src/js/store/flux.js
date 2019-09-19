@@ -221,6 +221,26 @@ const getState = ({ getStore, setStore }) => {
 					setStore({ teamOne: teamID });
 				}
 			},
+			login(user, history) {
+				fetch("https://3000-cddd9ece-0bb6-467e-976a-7594d5aa3c87.ws-us1.gitpod.io/login", {
+					method: "POST",
+					body: JSON.stringify(user),
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(response => {
+						if (!response.ok) throw Error();
+						//console.log(response.json());
+						return response.json();
+					})
+					.then(token => {
+						console.log(token);
+						setStore({ token: token.jwt, currentUser: token.id });
+						props.history.push("/PickTeam");
+					})
+					.catch(err => console.log(err));
+			},
 			signup(user, history) {
 				console.log("vacio", user);
 				fetch("https://3000-cddd9ece-0bb6-467e-976a-7594d5aa3c87.ws-us1.gitpod.io/user", {
