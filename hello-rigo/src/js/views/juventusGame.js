@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/pickteam.scss";
 
-export class juventusGame extends React.Component {
+export class JuventusGame extends React.Component {
 	render() {
 		return (
 			<React.Fragment>

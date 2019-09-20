@@ -1,4 +1,4 @@
-html,body{
+body{
 background-image: url('https://pbs.twimg.com/media/DV0uCtTW4AAyeuZ.jpg');
 background-size: cover;
 background-repeat: no-repeat;
@@ -18,10 +18,10 @@ margin: auto;
 .d-block{
     margin-left: 15px;
 }
-.container{
-height: 100%;
-align-content: center;
-}
+// .container{
+// height: 100%;
+// align-content: center;
+// }
 .card{
 height: 370px;
 margin-top: auto;
@@ -96,21 +96,21 @@ margin-left: 4px;
 
 }
 
-.col-2{
-       -ms-flex: 0 0 16.666667%;
-    flex: 0 0 16.666667%;
-    max-width: 18.666667%;
-}
+// .col-2{
+//        -ms-flex: 0 0 16.666667%;
+//     flex: 0 0 16.666667%;
+//     max-width: 18.666667%;
+// }
 
-.Row{
+// .Row{
 
-  display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: 190px;
-    margin-top: -215px;
-}
+//   display: flex;
+//     -ms-flex-wrap: wrap;
+//     flex-wrap: wrap;
+//     margin-right: -15px;
+//     margin-left: 190px;
+//     margin-top: -215px;
+// }
 
 
 .wrapper{
@@ -126,3 +126,4 @@ align-content: center;
     width: -200px;
     background:black;
 }
+
