@@ -381,7 +381,7 @@ const getState = ({ getStore, setStore }) => {
 				}
 			},
 			login(user, history) {
-				fetch("https://3000-cddd9ece-0bb6-467e-976a-7594d5aa3c87.ws-us1.gitpod.io/login", {
+				fetch("https://soccer-final-project-api.herokuapp.com/login", {
 					method: "POST",
 					body: JSON.stringify(user),
 					headers: {
@@ -403,7 +403,7 @@ const getState = ({ getStore, setStore }) => {
 			},
 			signup(user, history) {
 				console.log("vacio", user);
-				fetch("https://3000-cddd9ece-0bb6-467e-976a-7594d5aa3c87.ws-us1.gitpod.io/user", {
+				fetch("https://soccer-final-project-api.herokuapp.com/user", {
 					method: "POST",
 					body: JSON.stringify(user),
 					headers: {
@@ -432,7 +432,7 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 			getAllUsers() {
-				fetch("https://3000-cddd9ece-0bb6-467e-976a-7594d5aa3c87.ws-us1.gitpod.io/user", {
+				fetch("https://soccer-final-project-api.herokuapp.com/user", {
 					method: "GET",
 					headers: {
 						"Content-Type": "application/json"
@@ -445,7 +445,7 @@ const getState = ({ getStore, setStore }) => {
 					});
 			},
 			getAllPlayers() {
-				fetch("https://3000-cddd9ece-0bb6-467e-976a-7594d5aa3c87.ws-us1.gitpod.io/player", {
+				fetch("https://soccer-final-project-api.herokuapp.com/player", {
 					method: "GET",
 					headers: {
 						"Content-Type": "application/json"

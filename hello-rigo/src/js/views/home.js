@@ -18,7 +18,7 @@ export class Home extends React.Component {
 			<Context.Consumer>
 				{({ store, actions }) => {
 					return (
-						<div className="container home">
+						<div className="container loginPage">
 							<div className="d-flex justify-content-center h-100">
 								<div className="card">
 									<div className="card-header">
