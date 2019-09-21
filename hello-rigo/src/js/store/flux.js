@@ -9,7 +9,7 @@ const getState = ({ getStore, setStore }) => {
 			teams: [
 				{
 					id: 1,
-					name: "A.c. Milan",
+					name: "Juventus",
 					players: [
 						{
 							id: 1,
@@ -60,8 +60,167 @@ const getState = ({ getStore, setStore }) => {
 					]
 				},
 				{
-					id: 1,
+					id: 2,
 					name: "Real Madrid",
+					players: [
+						{
+							id: 1,
+							name: "Cristiano Ronaldo",
+							position: "attacker",
+							image:
+								"https://images2.gazzettaobjects.it/methode_image/2018/12/10/Calcio/Foto%20Calcio%20-%20Trattate/31.0.1012834460-0050-U2021820495617iD-U3101123990664zRD-620x349@Gazzetta-Web_articolo.jpg?v=201812101702",
+							attack: "Attack 50",
+							defense: "Defense 30",
+							player_id: "874",
+							season: "2019-2020",
+							goals_total: "6",
+							passes_total: "150",
+							tackles_total: "6",
+							shots_total: "15",
+							goals_conceded: "2"
+						},
+						{
+							id: 2,
+							name: "Miralem Pjanic",
+							position: "Position: midfielder",
+							image: "https://m.media-amazon.com/images/I/81IG6OK-2yL._SS500_.jpg ",
+							attack: "attack: 40",
+							defense: "Defense: 40",
+							player_id: "872",
+							season: "2019-2020",
+							goals_total: "1",
+							passes_total: "170",
+							tackles_total: "4",
+							shots_total: "5",
+							goals_conceded: "2"
+						},
+						{
+							id: 3,
+							name: "Leonardo Bonucci",
+							position: "Position: defender",
+							image: "https://www.soccerpro.com/wp-content/uploads/2018/02/cban_Bonucci.jpg",
+							attack: "Attack: 30",
+							defense: "Defense: 45",
+							player_id: "128",
+							season: "2019-2020",
+							goals_total: "0",
+							passes_total: "130",
+							tackles_total: "6",
+							shots_total: "0",
+							goals_conceded: "2"
+						}
+					]
+				},
+
+				{
+					id: 3,
+					name: "Barcelona",
+					players: [
+						{
+							id: 1,
+							name: "Cristiano Ronaldo",
+							position: "attacker",
+							image:
+								"https://images2.gazzettaobjects.it/methode_image/2018/12/10/Calcio/Foto%20Calcio%20-%20Trattate/31.0.1012834460-0050-U2021820495617iD-U3101123990664zRD-620x349@Gazzetta-Web_articolo.jpg?v=201812101702",
+							attack: "Attack 50",
+							defense: "Defense 30",
+							player_id: "874",
+							season: "2019-2020",
+							goals_total: "6",
+							passes_total: "150",
+							tackles_total: "6",
+							shots_total: "15",
+							goals_conceded: "2"
+						},
+						{
+							id: 2,
+							name: "Miralem Pjanic",
+							position: "Position: midfielder",
+							image: "https://m.media-amazon.com/images/I/81IG6OK-2yL._SS500_.jpg ",
+							attack: "attack: 40",
+							defense: "Defense: 40",
+							player_id: "872",
+							season: "2019-2020",
+							goals_total: "1",
+							passes_total: "170",
+							tackles_total: "4",
+							shots_total: "5",
+							goals_conceded: "2"
+						},
+						{
+							id: 3,
+							name: "Leonardo Bonucci",
+							position: "Position: defender",
+							image: "https://www.soccerpro.com/wp-content/uploads/2018/02/cban_Bonucci.jpg",
+							attack: "Attack: 30",
+							defense: "Defense: 45",
+							player_id: "128",
+							season: "2019-2020",
+							goals_total: "0",
+							passes_total: "130",
+							tackles_total: "6",
+							shots_total: "0",
+							goals_conceded: "2"
+						}
+					]
+				},
+
+				{
+					id: 4,
+					name: "Manchester City",
+					players: [
+						{
+							id: 1,
+							name: "Cristiano Ronaldo",
+							position: "attacker",
+							image:
+								"https://images2.gazzettaobjects.it/methode_image/2018/12/10/Calcio/Foto%20Calcio%20-%20Trattate/31.0.1012834460-0050-U2021820495617iD-U3101123990664zRD-620x349@Gazzetta-Web_articolo.jpg?v=201812101702",
+							attack: "Attack 50",
+							defense: "Defense 30",
+							player_id: "874",
+							season: "2019-2020",
+							goals_total: "6",
+							passes_total: "150",
+							tackles_total: "6",
+							shots_total: "15",
+							goals_conceded: "2"
+						},
+						{
+							id: 2,
+							name: "Miralem Pjanic",
+							position: "Position: midfielder",
+							image: "https://m.media-amazon.com/images/I/81IG6OK-2yL._SS500_.jpg ",
+							attack: "attack: 40",
+							defense: "Defense: 40",
+							player_id: "872",
+							season: "2019-2020",
+							goals_total: "1",
+							passes_total: "170",
+							tackles_total: "4",
+							shots_total: "5",
+							goals_conceded: "2"
+						},
+						{
+							id: 3,
+							name: "Leonardo Bonucci",
+							position: "Position: defender",
+							image: "https://www.soccerpro.com/wp-content/uploads/2018/02/cban_Bonucci.jpg",
+							attack: "Attack: 30",
+							defense: "Defense: 45",
+							player_id: "128",
+							season: "2019-2020",
+							goals_total: "0",
+							passes_total: "130",
+							tackles_total: "6",
+							shots_total: "0",
+							goals_conceded: "2"
+						}
+					]
+				},
+
+				{
+					id: 5,
+					name: "Liverpool",
 					players: [
 						{
 							id: 1,

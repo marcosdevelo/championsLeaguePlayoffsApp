@@ -8,9 +8,81 @@ export class Match extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
-				<div className="col-5">hello</div>
-				<div className="col-2">ciao</div>
-				<div className="col-5">hola</div>
+				<div className="row">
+					<div className="col-4 float-left">logo</div>
+					<div className="col-4 float-right justify-content-center">KICK OFF!!!</div>
+					<div className="col-4 float-right">logo</div>
+				</div>
+				<div className="row">
+					<div className="col-6">
+						<div className="row">
+							<Context.Consumer>
+								{({ store, actions }) => {
+									return store.teams[0].players.map((item, index) => {
+										return (
+											<div key={index} className="col-4">
+												<div className="cardPlayer">
+													<div className="card-header">{item.name}</div>
+													<img src={item.image} alt="Smiley face" height="75" width="75" />
+													<div className="card-body">
+														<div>{item.position}</div>
+														<div>{item.attack}</div>
+														<div>{item.defense}</div>
+													</div>
+													<div className="card-footer">
+														<button type="button" className="btn btn-danger">
+															ATTK
+														</button>
+														<button type="button" className="btn btn-primary">
+															DEF
+														</button>
+													</div>
+												</div>
+											</div>
+										);
+									});
+								}}
+							</Context.Consumer>
+						</div>
+					</div>
+				</div>
+
+				<div className="row">
+					<div className="col-4">center</div>
+				</div>
+				<div className="row ">
+					<div className="col-6">
+						<div className="row">
+							<Context.Consumer>
+								{({ store, actions }) => {
+									return store.teams[1].players.map((item, index) => {
+										return (
+											<div key={index} className="col-4">
+												<div className="cardPlayer">
+													<div className="card-header">{item.name}</div>
+													<img src={item.image} alt="Smiley face" height="75" width="75" />
+													<div className="card-body">
+														<div>{item.position}</div>
+														<div>{item.attack}</div>
+														<div>{item.defense}</div>
+													</div>
+													<div className="card-footer">
+														<button type="button" className="btn btn-danger">
+															ATTK
+														</button>
+														<button type="button" className="btn btn-primary">
+															DEF
+														</button>
+													</div>
+												</div>
+											</div>
+										);
+									});
+								}}
+							</Context.Consumer>
+						</div>
+					</div>
+				</div>
 			</React.Fragment>
 		);
 	}

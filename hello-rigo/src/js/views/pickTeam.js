@@ -106,11 +106,7 @@ export class PickTeam extends React.Component {
 								</React.Fragment>
 							);
 						} else {
-							return (
-								<div className="row">
-									<Match />
-								</div>
-							);
+							return <Match />;
 						}
 					}}
 				</Context.Consumer>
