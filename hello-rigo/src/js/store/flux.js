@@ -230,14 +230,15 @@ const getState = ({ getStore, setStore }) => {
 					}
 				})
 					.then(response => {
-						if (!response.ok) throw Error();
+						if (!response.ok) setStore({ invalid: true });
 						//console.log(response.json());
-						return response.json();
+						else return response.json();
 					})
 					.then(token => {
 						console.log(token);
+
 						setStore({ token: token.jwt, currentUser: token.id });
-						props.history.push("/PickTeam");
+						history.push("/PickTeam");
 					})
 					.catch(err => console.log(err));
 			},

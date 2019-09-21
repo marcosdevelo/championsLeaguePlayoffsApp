@@ -26,6 +26,9 @@ export class Home extends React.Component {
 									</div>
 									<div className="card-body">
 										<form>
+											{store.invalid && (
+												<div className="alert alert-danger">Invalid Credentials</div>
+											)}
 											<div className="input-group form-group">
 												<div className="input-group-prepend">
 													<span className="input-group-text">
@@ -62,7 +65,7 @@ export class Home extends React.Component {
 													onClick={() => {
 														actions.login(this.state, this.props.history);
 													}}
-													type="submit"
+													type="button"
 													value="Login"
 													className="btn float-right login_btn"
 												/>

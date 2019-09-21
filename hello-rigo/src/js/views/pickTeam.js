@@ -96,6 +96,23 @@ export class PickTeam extends React.Component {
 											</Carousel.Caption>
 										</div>
 									</Carousel.Item>
+
+									<Carousel.Item>
+										<div className="carousel">
+											<img
+												className="d-block"
+												src="http://tny.im/jyY"
+												alt="Third slide"
+												width="225"
+												height="228"
+											/>
+
+											<Carousel.Caption>
+												<h3>Third slide label</h3>
+												<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+											</Carousel.Caption>
+										</div>
+									</Carousel.Item>
 								</Carousel>
 							) : (
 								<div className="text-white text-center">
