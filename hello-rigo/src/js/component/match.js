@@ -53,12 +53,6 @@ export class Match extends React.Component {
 						</div>
 					</div>
 				</div>
-				{/* Modal */}
-				{/* <div className="row pb-4">
-					<div className="col-4 offset-4 position-fixed">
-						<Fight /> */}
-				{/* </div> */}
-				{/* </div> */}
 				<div className="row">
 					<div className="col-6 ml-auto opponent">
 						<div className="row">
