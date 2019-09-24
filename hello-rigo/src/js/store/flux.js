@@ -2,6 +2,8 @@ const getState = ({ getStore, setStore }) => {
 	//, getActions
 	return {
 		store: {
+			currentTeamOne: null,
+			currentTeamTwo: null,
 			teamOne: null,
 			teamTwo: null,
 			users: [],
@@ -373,10 +375,21 @@ const getState = ({ getStore, setStore }) => {
 		actions: {
 			pickATeam(teamID) {
 				let store = getStore();
+
 				console.log("Team ID:", teamID);
 				if (store.teamOne != null) {
+					let currentTeamOne = store.teams.find(x => {
+						return x.id == teamID;
+					});
+					console.log("currentTeamOne: ", currentTeamOne);
+
 					setStore({ teamTwo: teamID });
 				} else {
+					let currentTeamTwo = store.teams.find(y => {
+						return y.id == teamID;
+					});
+					console.log("currentTeamTwo: ", currentTeamTwo);
+
 					setStore({ teamOne: teamID });
 				}
 			},
