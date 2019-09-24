@@ -25,7 +25,11 @@ export class Match extends React.Component {
 						<div className="row">
 							<Context.Consumer>
 								{({ store, actions }) => {
-									return store.teams[0].players.map((item, index) => {
+									let indexTeamOne = store.teams.findIndex(x => {
+										return x.id == store.teamOne;
+									});
+									console.log("index", indexTeamOne);
+									return store.teams[indexTeamOne].players.map((item, index) => {
 										return (
 											<div key={index} className="col-4">
 												<div className="cardPlayer">
@@ -53,12 +57,20 @@ export class Match extends React.Component {
 						</div>
 					</div>
 				</div>
+
+				<div className="row pb-4">
+					<div className="col-4 ?">Match Players</div>
+				</div>
 				<div className="row">
-					<div className="col-6 ml-auto opponent">
+					<div className="col-6 opponent ml-auto">
 						<div className="row">
 							<Context.Consumer>
 								{({ store, actions }) => {
-									return store.teams[1].players.map((item, index) => {
+									let indexTeamTwo = store.teams.findIndex(y => {
+										return y.id == store.teamTwo;
+									});
+									console.log("index", indexTeamTwo);
+									return store.teams[indexTeamTwo].players.map((item, index) => {
 										return (
 											<div key={index} className="col-4">
 												<div className="cardPlayer">

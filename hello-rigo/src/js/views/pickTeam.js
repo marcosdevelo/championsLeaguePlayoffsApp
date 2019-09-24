@@ -11,6 +11,8 @@ export class PickTeam extends React.Component {
 
 		//this will be passed as the contenxt value
 		this.state = {
+			currentTeamOne: null,
+			currentTeamTwo: null,
 			teamOne: null,
 			teamTwo: null
 		};
@@ -35,7 +37,7 @@ export class PickTeam extends React.Component {
 														width="225"
 														height="228"
 														onClick={() => {
-															actions.pickATeam(2);
+															actions.pickATeam(1);
 														}}
 													/>
 
@@ -55,7 +57,7 @@ export class PickTeam extends React.Component {
 														width="225"
 														height="228"
 														onClick={() => {
-															actions.pickATeam(1);
+															actions.pickATeam(3);
 														}}
 													/>
 
@@ -73,6 +75,9 @@ export class PickTeam extends React.Component {
 													alt="Third slide"
 													width="225"
 													height="228"
+													onClick={() => {
+														actions.pickATeam(2);
+													}}
 												/>
 
 												<Carousel.Caption>
@@ -92,6 +97,9 @@ export class PickTeam extends React.Component {
 													alt="Third slide"
 													width="225"
 													height="228"
+													onClick={() => {
+														actions.pickATeam(5);
+													}}
 												/>
 
 												<Carousel.Caption>
