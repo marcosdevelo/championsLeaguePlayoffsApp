@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { LandingPage } from "./views/landingPage";
-import { Home } from "./views/home";
-import { Demo } from "./views/demo";
+import { Login } from "./views/login";
+import { Signup } from "./views/signup";
 import { Single } from "./views/single";
 import { PickTeam } from "./views/pickTeam";
 import { barcelonaGame } from "./views/barcelonaGame";
@@ -27,8 +27,8 @@ export class Layout extends React.Component {
 					<ScrollToTop>
 						<Switch>
 							<Route exact path="/" component={LandingPage} />
-							<Route exact path="/home" component={Home} />
-							<Route exact path="/demo" component={Demo} />
+							<Route exact path="/login" component={Login} />
+							<Route exact path="/signup" component={Signup} />
 							<Route exact path="/PickTeam" component={PickTeam} />
 							<Route exact path="/juventusGame" component={JuventusGame} />
 							<Route exact path="/match" component={Match} />

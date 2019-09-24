@@ -25,7 +25,7 @@ export class LandingPage extends React.Component {
 							<Dropdown.Item as="button">My profile</Dropdown.Item>
 							<Dropdown.Item as="button">Log out</Dropdown.Item>
 						</DropdownButton>
-						<Link to="/home">
+						<Link to="/login">
 							<button type="button" className="btn btn-primary">
 								Primary
 							</button>

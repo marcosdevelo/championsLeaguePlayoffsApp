@@ -423,11 +423,11 @@ const getState = ({ getStore, setStore }) => {
 						setStore({
 							users: store.users.concat(data)
 						});
-						history.push("/home");
+						history.push("/login");
 					})
 					.catch(error => {
 						//error handling
-						console.log("hubo un error en fetch save", error);
+						console.log("empty signup save", error);
 						alert(error);
 					});
 			},
