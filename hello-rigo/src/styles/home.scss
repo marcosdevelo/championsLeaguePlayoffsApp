@@ -5,6 +5,20 @@ background-repeat: no-repeat;
 height: 100%;
 font-family: 'Numans', sans-serif;
 }
+
+.container {
+       max-width: 766px;}
+.boton{
+    float: right;
+}
+.logochamp {
+   height: 55px;
+    width: 62px;
+}
+.navbar{
+    padding: 1.3rem 2rem;
+    padding-bottom: 7px;
+}
 .carousel{
 max-width: 258px;
 margin: auto;
@@ -21,7 +35,9 @@ margin: auto;
     bottom: -171px;
 }
 
-
+.bg-dark {
+    background-color: #ffda3a !important;
+}
 .d-block{
     margin-left: 15px;
 }

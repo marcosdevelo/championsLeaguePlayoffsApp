@@ -10,31 +10,24 @@ export class LandingPage extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
-				<div className="landingPage">
-					<Navbar bg="">
+				<div className="PageNav">
+					<Navbar bg="dark">
 						<Navbar.Brand href="#home">
 							<img
 								src="https://vignette.wikia.nocookie.net/logopedia/images/4/4d/UEFA_Champions_League_%282012%29.svg/revision/latest/scale-to-width-down/200?cb=20180731114846"
-								className="d-inline-block align-top"
+								className="d-inline-block align-top logochamp"
 								width="30"
 								height="30"
 								alt="React Bootstrap logo"
 							/>
 						</Navbar.Brand>
-						<DropdownButton id="dropdown-item-button" title="Dropdown button">
-							<Dropdown.Item as="button">My profile</Dropdown.Item>
-							<Dropdown.Item as="button">Log out</Dropdown.Item>
-						</DropdownButton>
-						<Link to="/login">
-							<button type="button" className="btn btn-primary">
-								Primary
-							</button>
-						</Link>
-					</Navbar>
-				</div>
-				<div className="container-fluid">
-					<Navbar bg="">
-						<Navbar.Brand href="#home">
+
+						{/* </Navbar> */}
+
+						{/* <div className="teamBar m-0 p-0">
+					<Navbar bg="light">
+						<Navbar.Brand href="#home"> */}
+						<div className="container teamsbar">
 							<img
 								src="https://vignette.wikia.nocookie.net/logopedia/images/9/98/Real_Madrid.png/revision/latest/scale-to-width-down/220?cb=20161111231747"
 								className="d-inline-block align-top"
@@ -46,7 +39,7 @@ export class LandingPage extends React.Component {
 								src="https://vignette.wikia.nocookie.net/logopedia/images/4/47/FC_Barcelona_%28crest%29.svg/revision/latest/scale-to-width-down/200?cb=20190425113731"
 								className="d-inline-block align-top"
 								width="39"
-								height="40"
+								height="37"
 								alt="React Bootstrap logo"
 							/>
 							<img
@@ -70,8 +63,20 @@ export class LandingPage extends React.Component {
 								height="40"
 								alt="React Bootstrap logo"
 							/>
-						</Navbar.Brand>
+						</div>
+						<DropdownButton className="ml-auto" id="dropdown-item-button" title="Dropdown button">
+							<Dropdown.Item as="button">My profile</Dropdown.Item>
+							<Dropdown.Item as="button">Log out</Dropdown.Item>
+						</DropdownButton>
+
+						{/* </div> */}
 					</Navbar>
+					<Link to="/login">
+						<button type="button" className="btn btn-primary">
+							Primary
+						</button>
+					</Link>
+					{/* </Navbar> */}
 				</div>
 			</React.Fragment>
 		);
