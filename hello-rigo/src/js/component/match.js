@@ -41,10 +41,21 @@ export class Match extends React.Component {
 														<div>{item.defense}</div>
 													</div>
 													<div className="card-footer">
-														<button type="button" className="btn btn-danger">
+														<button
+															type="button"
+															className="btn btn-danger"
+															onClick={() => {
+																this.setState({ x: item.player_id });
+																actions.playACard(item.player_id, "attack");
+															}}>
 															ATTK
 														</button>
-														<button type="button" className="btn btn-primary">
+														<button
+															type="button"
+															className="btn btn-primary"
+															onClick={() => {
+																actions.playACard(item.player_id, "defense");
+															}}>
 															DEF
 														</button>
 													</div>
@@ -83,10 +94,20 @@ export class Match extends React.Component {
 														<div>{item.defense}</div>
 													</div>
 													<div className="card-footer">
-														<button type="button" className="btn btn-danger">
+														<button
+															type="button"
+															className="btn btn-danger"
+															onClick={() => {
+																actions.playACard(item.player_id, "attack");
+															}}>
 															ATTK
 														</button>
-														<button type="button" className="btn btn-primary">
+														<button
+															type="button"
+															className="btn btn-primary"
+															onClick={() => {
+																actions.playACard(item.player_id, "defense");
+															}}>
 															DEF
 														</button>
 													</div>

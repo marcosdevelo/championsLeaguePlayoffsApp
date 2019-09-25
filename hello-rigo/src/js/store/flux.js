@@ -373,6 +373,11 @@ const getState = ({ getStore, setStore }) => {
 		},
 
 		actions: {
+			playACard(playerID, action) {
+				console.log("playerID:", playerID);
+				console.log("player_action:", action);
+			},
+
 			pickATeam(teamID) {
 				let store = getStore();
 
