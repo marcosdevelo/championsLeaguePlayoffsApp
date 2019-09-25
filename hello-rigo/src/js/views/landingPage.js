@@ -57,14 +57,14 @@ export class LandingPage extends React.Component {
 								alt="React Bootstrap logo"
 							/>
 							<img
-								src="https://vignette.wikia.nocookie.net/logopedia/images/3/36/Manchester_City_2016.png/revision/latest/scale-to-width-down/200?cb=20151229013856"
+								src="https://mediacdn.mancity.com/-/media/images/shared/clubs/manchester-city-new-logo.ashx?mw=160&hash=D65C8BB3DE70E0284E65F4BC61BD7C653C877A3D"
 								className="d-inline-block align-top"
-								width="23"
+								width="41"
 								height="40"
 								alt="React Bootstrap logo"
 							/>
 						</div>
-						<DropdownButton className="ml-auto" id="dropdown-item-button" title="Dropdown button">
+						<DropdownButton id="dropdown-item-button" title="Dropdown button">
 							<Dropdown.Item as="button">My profile</Dropdown.Item>
 							<Dropdown.Item as="button">Log out</Dropdown.Item>
 						</DropdownButton>
