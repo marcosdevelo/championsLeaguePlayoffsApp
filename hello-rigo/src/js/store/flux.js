@@ -378,17 +378,17 @@ const getState = ({ getStore, setStore }) => {
 
 				console.log("Team ID:", teamID);
 				if (store.teamOne != null) {
-					let currentTeamOne = store.teams.find(x => {
+					let currentTeamTwo = store.teams.find(x => {
 						return x.id == teamID;
 					});
-					console.log("currentTeamOne: ", currentTeamOne);
+					console.log("currentTeamTwo: ", currentTeamTwo);
 
 					setStore({ teamTwo: teamID });
 				} else {
-					let currentTeamTwo = store.teams.find(y => {
+					let currentTeamOne = store.teams.find(y => {
 						return y.id == teamID;
 					});
-					console.log("currentTeamTwo: ", currentTeamTwo);
+					console.log("currentTeamOne: ", currentTeamOne);
 
 					setStore({ teamOne: teamID });
 				}
@@ -457,8 +457,8 @@ const getState = ({ getStore, setStore }) => {
 						setStore({ users: data });
 					});
 			},
-			getAllPlayers() {
-				fetch("https://soccer-final-project-api.herokuapp.com/player", {
+			getAllTeams() {
+				fetch("https://soccer-final-project-api.herokuapp.com/teams", {
 					method: "GET",
 					headers: {
 						"Content-Type": "application/json"
@@ -467,7 +467,7 @@ const getState = ({ getStore, setStore }) => {
 					.then(response => response.json())
 					.then(data => {
 						console.log("Icoming users: ", data);
-						setStore({ players: data });
+						setStore({ teams: data });
 					});
 			},
 			fightToPlayers(p1, p2) {}
