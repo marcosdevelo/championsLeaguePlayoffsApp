@@ -74,6 +74,7 @@ export class Match extends React.Component {
 										return (
 											<div key={index} className="col-4">
 												<div className="cardPlayer">
+													<div>{item.teamLogo}</div>
 													<div className="card-header">{item.name}</div>
 													<img src={item.image} alt="Smiley face" height="75" width="75" />
 													<div className="card-body">

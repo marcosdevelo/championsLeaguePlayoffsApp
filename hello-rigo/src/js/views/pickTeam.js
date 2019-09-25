@@ -7,9 +7,7 @@ import "../../styles/home.scss";
 import { Match } from "../component/match.js";
 export class PickTeam extends React.Component {
 	constructor(props) {
-		super(props);
-
-		//this will be passed as the contenxt value
+		super(props); //this will be passed as the contenxt value
 		this.state = {
 			currentTeamOne: null,
 			currentTeamTwo: null,
@@ -17,7 +15,6 @@ export class PickTeam extends React.Component {
 			teamTwo: null
 		};
 	}
-
 	render() {
 		return (
 			<div className="container-fluid tarjetas">
@@ -27,7 +24,7 @@ export class PickTeam extends React.Component {
 							return (
 								<React.Fragment>
 									<Carousel>
-										{store.teamOne !== 2 && (
+										{store.teamOne !== 4 && (
 											<Carousel.Item>
 												<div className="carousel">
 													<img
@@ -37,7 +34,7 @@ export class PickTeam extends React.Component {
 														width="225"
 														height="228"
 														onClick={() => {
-															actions.pickATeam(1);
+															actions.pickATeam(4);
 														}}
 													/>
 
@@ -47,12 +44,34 @@ export class PickTeam extends React.Component {
 												</div>
 											</Carousel.Item>
 										)}
-										{store.teamOne !== 1 && (
+
+										{store.teamOne !== 2 && (
 											<Carousel.Item>
 												<div className="carousel">
 													<img
 														className="d-block "
 														src="https://vignette.wikia.nocookie.net/logopedia/images/4/47/FC_Barcelona_%28crest%29.svg/revision/latest/scale-to-width-down/200?cb=20190425113731"
+														alt="Third slide"
+														width="225"
+														height="228"
+														onClick={() => {
+															actions.pickATeam(2);
+														}}
+													/>
+
+													<Carousel.Caption>
+														<h3 />
+													</Carousel.Caption>
+												</div>
+											</Carousel.Item>
+										)}
+
+										{store.teamOne !== 3 && (
+											<Carousel.Item>
+												<div className="carousel">
+													<img
+														className="d-block-real"
+														src="https://vignette.wikia.nocookie.net/logopedia/images/9/98/Real_Madrid.png/revision/latest?cb=20161111231747"
 														alt="Third slide"
 														width="225"
 														height="228"
@@ -67,49 +86,48 @@ export class PickTeam extends React.Component {
 												</div>
 											</Carousel.Item>
 										)}
-										<Carousel.Item>
-											<div className="carousel">
-												<img
-													className="d-block-real"
-													src="https://vignette.wikia.nocookie.net/logopedia/images/9/98/Real_Madrid.png/revision/latest?cb=20161111231747"
-													alt="Third slide"
-													width="225"
-													height="228"
-													onClick={() => {
-														actions.pickATeam(2);
-													}}
-												/>
 
-												<Carousel.Caption>
-													<h3>Third slide label</h3>
-													<p>
-														Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-													</p>
-												</Carousel.Caption>
-											</div>
-										</Carousel.Item>
+										{store.teamOne !== 1 && (
+											<Carousel.Item>
+												<div className="carousel">
+													<img
+														className="d-block-real"
+														src="https://vignette.wikia.nocookie.net/logopedia/images/3/36/Manchester_City_2016.png/revision/latest/scale-to-width-down/200?cb=20151229013856"
+														alt="Third slide"
+														width="225"
+														height="228"
+														onClick={() => {
+															actions.pickATeam(1);
+														}}
+													/>
 
-										<Carousel.Item>
-											<div className="carousel">
-												<img
-													className="d-block"
-													src="https://vignette.wikia.nocookie.net/logopedia/images/4/49/Liverpool_FC_logo_%28introduced_2012%29.svg/revision/latest/scale-to-width-down/130?cb=20120705223744"
-													alt="Third slide"
-													width="225"
-													height="228"
-													onClick={() => {
-														actions.pickATeam(5);
-													}}
-												/>
+													<Carousel.Caption>
+														<h3 />
+													</Carousel.Caption>
+												</div>
+											</Carousel.Item>
+										)}
 
-												<Carousel.Caption>
-													<h3>Third slide label</h3>
-													<p>
-														Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-													</p>
-												</Carousel.Caption>
-											</div>
-										</Carousel.Item>
+										{store.teamOne !== 5 && (
+											<Carousel.Item>
+												<div className="carousel">
+													<img
+														className="d-block"
+														src="https://vignette.wikia.nocookie.net/logopedia/images/4/49/Liverpool_FC_logo_%28introduced_2012%29.svg/revision/latest/scale-to-width-down/130?cb=20120705223744"
+														alt="Third slide"
+														width="225"
+														height="228"
+														onClick={() => {
+															actions.pickATeam(5);
+														}}
+													/>
+
+													<Carousel.Caption>
+														<h3 />
+													</Carousel.Caption>
+												</div>
+											</Carousel.Item>
+										)}
 									</Carousel>
 								</React.Fragment>
 							);
