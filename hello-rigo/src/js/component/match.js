@@ -3,16 +3,38 @@ import Carousel from "react-bootstrap/Carousel";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { Fight } from "../component/fight.js";
-// import "../../styles/home.scss";
+import "../../styles/home.scss";
 
 export class Match extends React.Component {
-	// x="col-4"
-	// if this.state.team == true
-	//     x='col-4 align-items middle'
-	// else
-	//     x='col-4'
+	constructor(props) {
+		super(props); //this will be passed as the contenxt value
+		this.state = {
+			activePlayer: 1,
 
+			x: []
+		};
+	}
 	render() {
+		let btnTeamOneAtt = "";
+		let btnTeamOneDef = "";
+		let btnTeamTwoAtt = "";
+		let btnTeamTwoDef = "";
+		let test;
+
+		if (this.state.activePlayer === 1) {
+			if (this.state.activePlayerAction === "attack") {
+				btnTeamOneAtt = "disabled test";
+			}
+		} else if (this.state.activePlayer !== 1) {
+			btnTeamTwoAtt = "disabled test";
+		} else if (this.state.activePlayer !== 1) {
+			if (this.state.activePlayerAction === "defense") {
+				btnTeamTwoDef = "disabled test";
+			}
+		} else if (this.state.activePlayer === 1) {
+			btnTeamOneDef = "disabled test";
+		}
+
 		return (
 			<React.Fragment>
 				<div className="row">
@@ -43,17 +65,30 @@ export class Match extends React.Component {
 													<div className="card-footer">
 														<button
 															type="button"
-															className="btn btn-danger"
+															className={"btn btn-danger " + btnTeamOneAtt}
 															onClick={() => {
-																this.setState({ x: item.player_id });
+																this.setState({
+																	activePlayer: 2,
+																	x: this.state.x.concat({
+																		playerId: item.player_id
+																	}),
+																	activePlayerAction: "attack"
+																});
 																actions.playACard(item.player_id, "attack");
 															}}>
 															ATTK
 														</button>
 														<button
 															type="button"
-															className="btn btn-primary"
+															className={"btn btn-primary " + btnTeamOneDef}
 															onClick={() => {
+																this.setState({
+																	activePlayer: 2,
+																	x: this.state.x.concat({
+																		playerId: item.player_id
+																	}),
+																	activePlayerAction: "defense"
+																});
 																actions.playACard(item.player_id, "defense");
 															}}>
 															DEF
@@ -70,7 +105,9 @@ export class Match extends React.Component {
 				</div>
 
 				<div className="row pb-4">
-					<div className="col-4 ?">Match Players</div>
+					<div className="col-4 ">
+						<h3>{"TURN: Player" + this.state.activePlayer}</h3>
+					</div>
 				</div>
 				<div className="row">
 					<div className="col-6 opponent ml-auto">
@@ -96,16 +133,30 @@ export class Match extends React.Component {
 													<div className="card-footer">
 														<button
 															type="button"
-															className="btn btn-danger"
+															className={"btn btn-danger " + btnTeamTwoAtt}
 															onClick={() => {
+																this.setState({
+																	activePlayer: 1,
+																	x: this.state.x.concat({
+																		playerId: item.player_id
+																	}),
+																	activePlayerAction: "attack"
+																});
 																actions.playACard(item.player_id, "attack");
 															}}>
 															ATTK
 														</button>
 														<button
 															type="button"
-															className="btn btn-primary"
+															className={"btn btn-primary " + btnTeamTwoDef}
 															onClick={() => {
+																this.setState({
+																	activePlayer: 1,
+																	x: this.state.x.concat({
+																		playerId: item.player_id
+																	}),
+																	activePlayerAction: "defense"
+																});
 																actions.playACard(item.player_id, "defense");
 															}}>
 															DEF

@@ -13,7 +13,7 @@ import { JuventusGame } from "./views/juventusGame";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { Match } from "./component/match.js";
-
+import { Fight } from "./component/fight.js";
 //create your first component
 export class Layout extends React.Component {
 	render() {
@@ -32,6 +32,7 @@ export class Layout extends React.Component {
 							<Route exact path="/PickTeam" component={PickTeam} />
 							<Route exact path="/juventusGame" component={JuventusGame} />
 							<Route exact path="/match" component={Match} />
+							<Route exact path="/Fight" component={Fight} />
 							<Route exact path="/barcelonaGame" component={barcelonaGame} />
 							<Route exact path="/single/:theid" component={Single} />
 							<Route render={() => <h1>Not found!</h1>} />

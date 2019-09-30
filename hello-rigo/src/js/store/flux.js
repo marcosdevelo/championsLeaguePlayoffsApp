@@ -2,6 +2,9 @@ const getState = ({ getStore, setStore }) => {
 	//, getActions
 	return {
 		store: {
+			activePlayer: true,
+			playerOne: null,
+			playerTwo: null,
 			currentTeamOne: null,
 			currentTeamTwo: null,
 			teamOne: null,
