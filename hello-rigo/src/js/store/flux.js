@@ -419,6 +419,7 @@ const getState = ({ getStore, setStore }) => {
 					})
 					.catch(err => console.log(err));
 			},
+
 			signup(user, history) {
 				console.log("vacio", user);
 				fetch("https://soccer-final-project-api.herokuapp.com/user", {
@@ -471,8 +472,21 @@ const getState = ({ getStore, setStore }) => {
 				})
 					.then(response => response.json())
 					.then(data => {
-						console.log("Icoming users: ", data);
+						console.log("Incoming teams: ", data);
 						setStore({ teams: data });
+					});
+			},
+			getAllPlayers() {
+				fetch("https://soccer-final-project-api.herokuapp.com/player", {
+					method: "GET",
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(response => response.json())
+					.then(data => {
+						console.log("Incoming players: ", data);
+						setStore({ players: data });
 					});
 			},
 			fightToPlayers(p1, p2) {}

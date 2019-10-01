@@ -13,6 +13,7 @@ import { JuventusGame } from "./views/juventusGame";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { Match } from "./component/match.js";
+import { PlayerCaruosel } from "./component/PlayerCarousel.js";
 
 //create your first component
 export class Layout extends React.Component {

@@ -26,7 +26,7 @@ export class PickTeam extends React.Component {
 									<Carousel>
 										{store.teamOne !== 4 && (
 											<Carousel.Item>
-												<div className="carousel">
+												<div className="carousel gamecarusel">
 													<img
 														className="d-block"
 														src="https://vignette.wikia.nocookie.net/logopedia/images/5/50/600px-Juventusstemma.png/revision/latest?cb=20120107135132"
@@ -47,7 +47,7 @@ export class PickTeam extends React.Component {
 
 										{store.teamOne !== 2 && (
 											<Carousel.Item>
-												<div className="carousel">
+												<div className="carousel gamecarusel">
 													<img
 														className="d-block "
 														src="https://vignette.wikia.nocookie.net/logopedia/images/4/47/FC_Barcelona_%28crest%29.svg/revision/latest/scale-to-width-down/200?cb=20190425113731"
@@ -68,7 +68,7 @@ export class PickTeam extends React.Component {
 
 										{store.teamOne !== 3 && (
 											<Carousel.Item>
-												<div className="carousel">
+												<div className="carousel gamecarusel">
 													<img
 														className="d-block-real"
 														src="https://vignette.wikia.nocookie.net/logopedia/images/9/98/Real_Madrid.png/revision/latest?cb=20161111231747"
@@ -89,7 +89,7 @@ export class PickTeam extends React.Component {
 
 										{store.teamOne !== 1 && (
 											<Carousel.Item>
-												<div className="carousel">
+												<div className="carousel gamecarusel">
 													<img
 														className="d-block-real"
 														src="https://vignette.wikia.nocookie.net/logopedia/images/3/36/Manchester_City_2016.png/revision/latest/scale-to-width-down/200?cb=20151229013856"
@@ -110,7 +110,7 @@ export class PickTeam extends React.Component {
 
 										{store.teamOne !== 5 && (
 											<Carousel.Item>
-												<div className="carousel">
+												<div className="carousel gamecarusel">
 													<img
 														className="d-block"
 														src="https://vignette.wikia.nocookie.net/logopedia/images/4/49/Liverpool_FC_logo_%28introduced_2012%29.svg/revision/latest/scale-to-width-down/130?cb=20120705223744"

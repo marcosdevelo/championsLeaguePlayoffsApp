@@ -73,12 +73,15 @@
 		"email-validator": "^2.0.4",
 		"formik": "^1.5.8",
 		"prop-types": "^15.6.1",
-		"react": "^16.8.4",
+		"react": "^16.10.0",
 		"react-bootstrap": "^1.0.0-beta.12",
-		"react-dom": "^16.8.4",
+		"react-dom": "^16.10.0",
 		"react-polyfills": "0.0.1",
+		"react-responsive-carousel": "^3.1.50",
 		"react-router": "^4.3.1",
 		"react-router-dom": "^4.3.1",
+		"react-styled-carousel": "^0.5.1",
+		"reactstrap": "^8.0.1",
 		"yup": "^0.27.0"
 	}
 }
