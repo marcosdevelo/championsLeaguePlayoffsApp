@@ -66,19 +66,38 @@ export class LandingPage extends React.Component {
 								alt="React Bootstrap logo"
 							/>
 						</div>
+						<Context.Consumer>
+							{({ store, actions }) => {
+								{
+									if (store.token === null) {
+										return (
+											<Link to="/login">
+												<button type="button" className="btn btn-primary">
+													Login To Play
+												</button>
+											</Link>
+										);
+									} else {
+										return (
+											<div>
+												<DropdownButton id="dropdown-item-button" title="Logout or Play Again">
+													<Link to="/PickTeam">
+														<Dropdown.Item as="button">Play Again</Dropdown.Item>
+													</Link>
 
-						<DropdownButton id="dropdown-item-button" title="Dropdown button">
-							<Dropdown.Item as="button">My profile</Dropdown.Item>
-							<Dropdown.Item as="button">Log out</Dropdown.Item>
-						</DropdownButton>
+													<Dropdown.Item as="button" onClick={() => actions.logout()}>
+														Log out
+													</Dropdown.Item>
+												</DropdownButton>
+											</div>
+										);
+									}
+								}
+							}}
+						</Context.Consumer>
 
 						{/* </div> */}
 					</Navbar>
-					<Link to="/login">
-						<button type="button" className="btn btn-primary">
-							Primary
-						</button>
-					</Link>
 				</div>
 				<div className="row h-50">
 					<div className="col-6">

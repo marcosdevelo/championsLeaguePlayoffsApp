@@ -373,6 +373,10 @@ const getState = ({ getStore, setStore }) => {
 		},
 
 		actions: {
+			logout: () => {
+				let store = getStore();
+				setStore({ token: null });
+			},
 			playACard(playerID, action) {
 				console.log("playerID:", playerID);
 				console.log("player_action:", action);
