@@ -3,7 +3,16 @@ background-image: url('https://pbs.twimg.com/media/DV0uCtTW4AAyeuZ.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
-font-family: 'Numans', sans-serif;
+font-family: 'Archivo Black', sans-serif;
+}
+.signup1{
+    font-size: 25px;
+
+}
+.donthave{
+        font-size: 15px;
+    text-align: center;
+    color: white;
 }
 .texto{
     height: 40px;
@@ -163,14 +172,27 @@ max-width: 258px;
     width: 170px;
     padding-bottom: 8px;
 }
+.mt-5, .my-5 {
+    margin-top: 9rem !important;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: 91px;
+}
 .opponent{
 
     position: relative;
     bottom: -171px;
 }
-
-.bg-dark {
-    background-color: #ffda3a !important;
+.btn-primary {
+    color: #fff;
+    background-color: #9e9e9eb5;
+    border-color:#9e9e9eb5;
 }
 .d-block{
     margin-left: 15px;
@@ -238,6 +260,8 @@ background-color: white;
 color: white;
 }
 .links a{
+
+    color: #ffc107;
 margin-left: 4px;
 }
 .tarjetas{
@@ -298,4 +322,5 @@ align-content: center;
 p {
      margin-top: 47px;
     margin-bottom: 1rem;
+
 }
