@@ -10,30 +10,52 @@ export class Match extends React.Component {
 		super(props); //this will be passed as the contenxt value
 		this.state = {
 			activePlayer: 1,
-
+			activePlayerAction: null,
+			playerId1: null,
+			playerId2: null,
 			x: []
 		};
 	}
+
 	render() {
-		let btnTeamOneAtt = "";
-		let btnTeamOneDef = "";
-		let btnTeamTwoAtt = "";
-		let btnTeamTwoDef = "";
+		// let btnTeamOneAtt = "";
+		// let btnTeamOneDef = "";
+		// let btnTeamTwoAtt = "";
+		// let btnTeamTwoDef = "";
 		let test;
 
-		if (this.state.activePlayer === 1) {
-			if (this.state.activePlayerAction === "attack") {
-				btnTeamOneAtt = "disabled test";
+		const endTurn = activePlayer => {
+			if (activePlayer === 1) {
+				this.setState({ activePlayer: 2 });
+			} else if (activePlayer === 2) {
+				this.setState({ activePlayer: 1 });
 			}
-		} else if (this.state.activePlayer !== 1) {
-			btnTeamTwoAtt = "disabled test";
-		} else if (this.state.activePlayer !== 1) {
-			if (this.state.activePlayerAction === "defense") {
-				btnTeamTwoDef = "disabled test";
+		};
+
+		const play = (playerID, playerAction, activePlayer) => {
+			if (activePlayer === 1) {
+				this.setState({
+					playerId1: playerID,
+					activePlayerAction: playerAction
+				});
+				console.log("playerID", playerID),
+					console.log("playerAction", this.state.activePlayerAction),
+					console.log("player", activePlayer);
+			} else if (activePlayer === 2) {
+				this.setState({
+					playerId2: playerID,
+					activePlayerAction: playerAction
+				});
+				{
+					{
+					}
+				}
+				console.log("playerID", playerID),
+					console.log("playerAction", this.state.activePlayerAction),
+					console.log("player", activePlayer);
+				endTurn(this.state.activePlayer);
 			}
-		} else if (this.state.activePlayer === 1) {
-			btnTeamOneDef = "disabled test";
-		}
+		};
 
 		return (
 			<React.Fragment>
@@ -62,38 +84,108 @@ export class Match extends React.Component {
 														<div>{item.attack}</div>
 														<div>{item.defense}</div>
 													</div>
-													<div className="card-footer">
-														<button
-															type="button"
-															className={"btn btn-danger " + btnTeamOneAtt}
-															onClick={() => {
-																this.setState({
-																	activePlayer: 2,
-																	x: this.state.x.concat({
-																		playerId: item.player_id
-																	}),
-																	activePlayerAction: "attack"
-																});
-																actions.playACard(item.player_id, "attack");
-															}}>
-															ATTK
-														</button>
-														<button
-															type="button"
-															className={"btn btn-primary " + btnTeamOneDef}
-															onClick={() => {
-																this.setState({
-																	activePlayer: 2,
-																	x: this.state.x.concat({
-																		playerId: item.player_id
-																	}),
-																	activePlayerAction: "defense"
-																});
-																actions.playACard(item.player_id, "defense");
-															}}>
-															DEF
-														</button>
-													</div>
+													{this.state.activePlayer === 1 ? (
+														this.state.player_id !== undefined ? (
+															this.state.playerAction === "attack" ? (
+																<div className="card-footer bubu">
+																	<button
+																		type="button"
+																		className={"btn btn-danger disabled"}>
+																		ATTK
+																	</button>
+																	<button
+																		type="button"
+																		className={"btn btn-primary"}
+																		onClick={() => {
+																			this.setState({
+																				activePlayer: 2,
+																				x: this.state.x.concat({
+																					playerId: item.player_id
+																				}),
+																				activePlayerAction: "defense"
+																			});
+																			play(
+																				item.player_id,
+																				"defense",
+																				this.state.activePlayer
+																			);
+																		}}>
+																		DEF
+																	</button>
+																</div>
+															) : (
+																<div className="card-footer last">
+																	<button
+																		type="button"
+																		className={"btn btn-danger"}
+																		onClick={() => {
+																			this.setState({
+																				activePlayer: 2,
+																				x: this.state.x.concat({
+																					playerId: item.player_id
+																				}),
+																				activePlayerAction: "attack"
+																			});
+																			play(
+																				item.player_id,
+																				"attack",
+																				this.state.activePlayer
+																			);
+																		}}>
+																		ATTK
+																	</button>
+																	<button
+																		type="button"
+																		className={"btn btn-primary disabled"}>
+																		DEF
+																	</button>
+																</div>
+															)
+														) : (
+															<div className="card-footer tutu">
+																<button
+																	type="button"
+																	className={"btn btn-danger"}
+																	onClick={() => {
+																		this.setState({
+																			activePlayer: 2,
+																			x: this.state.x.concat({
+																				playerId: item.player_id
+																			}),
+																			activePlayerAction: "attack"
+																		});
+																		play(
+																			item.player_id,
+																			"attack",
+																			this.state.activePlayer
+																		);
+																	}}>
+																	ATTK
+																</button>
+																<button
+																	type="button"
+																	className={"btn btn-primary "}
+																	onClick={() => {
+																		this.setState({
+																			activePlayer: 2,
+																			x: this.state.x.concat({
+																				playerId: item.player_id
+																			}),
+																			activePlayerAction: "defense"
+																		});
+																		play(
+																			item.player_id,
+																			"defense",
+																			this.state.activePlayer
+																		);
+																	}}>
+																	DEF
+																</button>
+															</div>
+														)
+													) : (
+														this.state.activePlayer === 2
+													)}
 												</div>
 											</div>
 										);
@@ -133,7 +225,7 @@ export class Match extends React.Component {
 													<div className="card-footer">
 														<button
 															type="button"
-															className={"btn btn-danger " + btnTeamTwoAtt}
+															className={"btn btn-danger "}
 															onClick={() => {
 																this.setState({
 																	activePlayer: 1,
@@ -142,13 +234,13 @@ export class Match extends React.Component {
 																	}),
 																	activePlayerAction: "attack"
 																});
-																actions.playACard(item.player_id, "attack");
+																play(item.player_id, "attack");
 															}}>
 															ATTK
 														</button>
 														<button
 															type="button"
-															className={"btn btn-primary " + btnTeamTwoDef}
+															className={"btn btn-primary "}
 															onClick={() => {
 																this.setState({
 																	activePlayer: 1,
@@ -157,7 +249,7 @@ export class Match extends React.Component {
 																	}),
 																	activePlayerAction: "defense"
 																});
-																actions.playACard(item.player_id, "defense");
+																play(item.player_id, "defense");
 															}}>
 															DEF
 														</button>
