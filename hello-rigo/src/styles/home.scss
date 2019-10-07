@@ -145,7 +145,7 @@ margin-left: 192px;
 
 
 .descriptionText{
-
+overflow-wrap: break-word;
 }
 .gameDescription{
  background: #20251cb0;
@@ -153,6 +153,7 @@ margin-left: 192px;
     width: 256px;
     overflow-wrap: break-word;
     color: white;
+     font-size: 20px;
 }
 
 
@@ -320,7 +321,7 @@ align-content: center;
 
 
 p {
-     margin-top: 47px;
+     margin-top: 24px;
     margin-bottom: 1rem;
 
 }

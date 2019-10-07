@@ -55,10 +55,11 @@ export class Login extends React.Component {
 													onChange={e => this.setState({ password: e.target.value })}
 												/>
 											</div>
-											{/* <div className="row align-items-center remember">
-												<input type="checkbox" />
-												Remember Me
-											</div> */}
+											{/* <form>
+												<label>
+													<input type="checkbox" name="remember" /> Remember me
+												</label>
+											</form> */}
 											<div className="form-group">
 												{/* <Link to="/PickTeam"> */}
 												<input
