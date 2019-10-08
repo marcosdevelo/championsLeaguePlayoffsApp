@@ -105,8 +105,8 @@ export class LandingPage extends React.Component {
 					</div>{" "}
 					<div className="col-4 mt-5 gameDescription">
 						<p className="descriptionText">
-							Each player gets a default attack and defense, based on real last game results you will get
-							extra points for shots,passes,tackles and goals conceded. Enjoy!
+							Each player gets a default attack and defense, based on real last game statistics, you will
+							get extra points for shots,passes,tackles and goals. Enjoy!
 						</p>
 					</div>
 				</div>

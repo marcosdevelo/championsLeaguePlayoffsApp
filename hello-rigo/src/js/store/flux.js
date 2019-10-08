@@ -2,6 +2,9 @@ const getState = ({ getStore, setStore }) => {
 	//, getActions
 	return {
 		store: {
+			activePlayer: true,
+			playerOne: null,
+			playerTwo: null,
 			currentTeamOne: null,
 			currentTeamTwo: null,
 			teamOne: null,
@@ -420,6 +423,26 @@ const getState = ({ getStore, setStore }) => {
 
 						setStore({ token: token.jwt, currentUser: token.id });
 						history.push("/PickTeam");
+					})
+					.catch(err => console.log(err));
+			},
+			checklogin(user, history) {
+				fetch("https://soccer-final-project-api.herokuapp.com/login", {
+					method: "GET",
+					body: JSON.stringify(user),
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(response => {
+						if (!response.ok) setStore({ token: null });
+						//console.log(response.json());
+						else return response.json();
+					})
+					.then(token => {
+						console.log(token);
+
+						getStore({ token: token.jwt, currentUser: token.id });
 					})
 					.catch(err => console.log(err));
 			},
