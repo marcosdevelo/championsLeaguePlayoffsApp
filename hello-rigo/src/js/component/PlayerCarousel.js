@@ -6,7 +6,7 @@ import Carousel from "react-bootstrap/Carousel";
 export class PlayerCaruosel extends React.Component {
 	render() {
 		return (
-			<div className="container playerContainer ">
+			<div className="container playerContainer">
 				<div className="card-deck ">
 					<Context.Consumer>
 						{({ store, actions }) => {

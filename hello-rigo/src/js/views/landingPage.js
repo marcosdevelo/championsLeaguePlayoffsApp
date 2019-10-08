@@ -101,9 +101,13 @@ export class LandingPage extends React.Component {
 				</div>
 				<div className="row h-50">
 					<div className="col-6">
-						<PlayerCaruosel />
+						<div className="carouselheader">
+							<span className="carouselheadertext">Up-To-Date Player Stats:</span>
+							<PlayerCaruosel />
+						</div>
 					</div>{" "}
 					<div className="col-4 mt-5 gameDescription">
+						<span className="carouselheadertext">GAME DESCRIPTION:</span>
 						<p className="descriptionText">
 							Each player gets a default attack and defense, based on real last game statistics, you will
 							get extra points for shots,passes,tackles and goals. Enjoy!

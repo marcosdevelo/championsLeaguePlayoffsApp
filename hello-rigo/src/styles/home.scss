@@ -5,6 +5,13 @@ background-repeat: no-repeat;
 height: 100%;
 font-family: 'Archivo Black', sans-serif;
 }
+.carouselheadertext{
+    font-size: 23px;
+}
+.carouselheader{
+
+    text-align: center;
+}
 .signup1{
     font-size: 25px;
 
@@ -321,11 +328,17 @@ align-content: center;
 
 
 
+
 p {
-     margin-top: 24px;
+
     margin-bottom: 1rem;
 }
 
 .test{
     display: none;
 }
+
+// .test{
+//     display: none;
+// }
+

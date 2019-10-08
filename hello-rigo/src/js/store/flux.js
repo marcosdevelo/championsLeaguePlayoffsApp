@@ -9,6 +9,7 @@ const getState = ({ getStore, setStore }) => {
 			currentTeamTwo: null,
 			teamOne: null,
 			teamTwo: null,
+
 			users: [],
 			players: [],
 			teams: [
@@ -70,13 +71,13 @@ const getState = ({ getStore, setStore }) => {
 					players: [
 						{
 							id: 1,
-							name: "Cristiano Ronaldo",
+							name: "Eden Hazard",
 							position: "attacker",
 							image:
 								"https://images2.gazzettaobjects.it/methode_image/2018/12/10/Calcio/Foto%20Calcio%20-%20Trattate/31.0.1012834460-0050-U2021820495617iD-U3101123990664zRD-620x349@Gazzetta-Web_articolo.jpg?v=201812101702",
 							attack: "Attack 50",
 							defense: "Defense 30",
-							player_id: "874",
+							player_id: "873",
 							season: "2019-2020",
 							goals_total: "6",
 							passes_total: "150",
@@ -86,12 +87,12 @@ const getState = ({ getStore, setStore }) => {
 						},
 						{
 							id: 2,
-							name: "Miralem Pjanic",
+							name: "Casemiro ",
 							position: "Position: midfielder",
 							image: "https://m.media-amazon.com/images/I/81IG6OK-2yL._SS500_.jpg ",
 							attack: "attack: 40",
 							defense: "Defense: 40",
-							player_id: "872",
+							player_id: "871",
 							season: "2019-2020",
 							goals_total: "1",
 							passes_total: "170",
@@ -101,12 +102,12 @@ const getState = ({ getStore, setStore }) => {
 						},
 						{
 							id: 3,
-							name: "Leonardo Bonucci",
+							name: "Sergio Ramos",
 							position: "Position: defender",
 							image: "https://www.soccerpro.com/wp-content/uploads/2018/02/cban_Bonucci.jpg",
 							attack: "Attack: 30",
 							defense: "Defense: 45",
-							player_id: "128",
+							player_id: "127",
 							season: "2019-2020",
 							goals_total: "0",
 							passes_total: "130",
@@ -426,24 +427,28 @@ const getState = ({ getStore, setStore }) => {
 					})
 					.catch(err => console.log(err));
 			},
-			checklogin(user, history) {
+			checklogin(token, history) {
 				fetch("https://soccer-final-project-api.herokuapp.com/login", {
 					method: "GET",
-					body: JSON.stringify(user),
+					body: JSON.stringify(token),
 					headers: {
 						"Content-Type": "application/json"
 					}
 				})
-					.then(response => {
-						if (!response.ok) setStore({ token: null });
-						//console.log(response.json());
-						else return response.json();
-					})
 					.then(token => {
 						console.log(token);
-
-						getStore({ token: token.jwt, currentUser: token.id });
 					})
+					.then(response => {
+						let store = getStore();
+						if ({ token: null }) setStore({ token: null });
+						//console.log(response.json());
+						else return token;
+					})
+					// .then(token => {
+					// 	console.log(token);
+
+					// 	getStore({ token: token.jwt, currentUser: token.id });
+					// })
 					.catch(err => console.log(err));
 			},
 
