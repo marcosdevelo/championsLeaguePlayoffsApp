@@ -9,7 +9,7 @@ const getState = ({ getStore, setStore }) => {
 			currentTeamTwo: null,
 			teamOne: null,
 			teamTwo: null,
-
+			token: null,
 			users: [],
 			players: [],
 			teams: [
