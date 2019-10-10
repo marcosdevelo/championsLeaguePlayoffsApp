@@ -533,8 +533,8 @@ export class Match extends React.Component {
 										</div>
 										<div className="card-body p-1">
 											<div>{this.state.playerId2.position}</div>
-											<div>{this.state.playerId2.attack}</div>
-											<div>{this.state.playerId2.defense}</div>
+											<div>{"Attack:" + this.state.playerId2.attack}</div>
+											<div>{"Defense:" + this.state.playerId2.defense}</div>
 										</div>
 										<div className="card-footer p-1">
 											{this.state.playerId2Action === "attack" ? (
@@ -576,8 +576,8 @@ export class Match extends React.Component {
 										</div>
 										<div className="card-body p-1">
 											<div>{this.state.playerId1.position}</div>
-											<div>{this.state.playerId1.attack}</div>
-											<div>{this.state.playerId1.defense}</div>
+											<div>{"Attack:" + this.state.playerId1.attack}</div>
+											<div>{"Defense:" + this.state.playerId1.defense}</div>
 										</div>
 										<div className="card-footer p-1">
 											{this.state.playerId1Action === "attack" ? (
