@@ -24,7 +24,7 @@ export class Signup extends React.Component {
 					return (
 						<div className="container loginPage">
 							<div className="d-flex justify-content-center h-100">
-								<div className="card">
+								<div className="card logincard">
 									<div className="card-header">
 										<h3>Sign Up</h3>
 									</div>

@@ -20,7 +20,7 @@ export class Login extends React.Component {
 					return (
 						<div className="container loginPage">
 							<div className="d-flex justify-content-center h-100">
-								<div className="card">
+								<div className="card logincard">
 									<div className="card-header">
 										<h3>Sign In</h3>
 									</div>
@@ -55,10 +55,11 @@ export class Login extends React.Component {
 													onChange={e => this.setState({ password: e.target.value })}
 												/>
 											</div>
-											<div className="row align-items-center remember">
-												<input type="checkbox" />
-												Remember Me
-											</div>
+											{/* <form>
+												<label>
+													<input type="checkbox" name="remember" /> Remember me
+												</label>
+											</form> */}
 											<div className="form-group">
 												{/* <Link to="/PickTeam"> */}
 												<input
@@ -73,13 +74,14 @@ export class Login extends React.Component {
 											</div>
 										</form>
 									</div>
-									<div className="card-footer">
+									<h1 className="donthave">{"Don't Have An Account?"}</h1>
+									<div className="card-footer signup1">
 										<div className="d-flex justify-content-center links">
 											<Link to="/signup">Sign Up</Link>
 										</div>
-										<div className="d-flex justify-content-center">
-											<a href="#">Forgot your password?</a>
-										</div>
+										{/* <div className="d-flex justify-content-center">
+											<a href="#">Forgot your password?</a> */}
+										{/* </div> */}
 									</div>
 								</div>
 							</div>

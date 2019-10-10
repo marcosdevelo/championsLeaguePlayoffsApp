@@ -9,6 +9,7 @@ const getState = ({ getStore, setStore }) => {
 			currentTeamTwo: null,
 			teamOne: null,
 			teamTwo: null,
+			token: null,
 			users: [],
 			players: [],
 			teams: [
@@ -376,6 +377,10 @@ const getState = ({ getStore, setStore }) => {
 		},
 
 		actions: {
+			logout: () => {
+				let store = getStore();
+				setStore({ token: null });
+			},
 			playACard(playerID, action) {
 				console.log("playerID:", playerID);
 				console.log("player_action:", action);
@@ -422,6 +427,31 @@ const getState = ({ getStore, setStore }) => {
 					})
 					.catch(err => console.log(err));
 			},
+			checklogin(token, history) {
+				fetch("https://soccer-final-project-api.herokuapp.com/login", {
+					method: "GET",
+					body: JSON.stringify(token),
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(token => {
+						console.log(token);
+					})
+					.then(response => {
+						let store = getStore();
+						if ({ token: null }) setStore({ token: null });
+						//console.log(response.json());
+						else return token;
+					})
+					// .then(token => {
+					// 	console.log(token);
+
+					// 	getStore({ token: token.jwt, currentUser: token.id });
+					// })
+					.catch(err => console.log(err));
+			},
+
 			signup(user, history) {
 				console.log("vacio", user);
 				fetch("https://soccer-final-project-api.herokuapp.com/user", {
@@ -474,8 +504,21 @@ const getState = ({ getStore, setStore }) => {
 				})
 					.then(response => response.json())
 					.then(data => {
-						console.log("Icoming users: ", data);
+						console.log("Incoming teams: ", data);
 						setStore({ teams: data });
+					});
+			},
+			getAllPlayers() {
+				fetch("https://soccer-final-project-api.herokuapp.com/player", {
+					method: "GET",
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(response => response.json())
+					.then(data => {
+						console.log("Incoming players: ", data);
+						setStore({ players: data });
 					});
 			},
 			fightToPlayers(p1, p2) {}
