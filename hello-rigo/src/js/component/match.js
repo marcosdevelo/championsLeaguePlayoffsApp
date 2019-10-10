@@ -446,7 +446,7 @@ export class Match extends React.Component {
 									return store.teams[indexTeamOne].players.map((item, index) => {
 										return (
 											<div key={index} className="col-4">
-												<div className="card text-center text-light">
+												<div className="card cardTeam text-center text-light">
 													<div className="card-header">{item.name}</div>
 													<div className="text-center">
 														<img
@@ -521,7 +521,7 @@ export class Match extends React.Component {
 						<div className="row">
 							<div className="col-3">
 								{this.state.playerId2 && (
-									<div className="card text-center text-light playedCard">
+									<div className="card  text-center text-light playedCard">
 										<div className="card-header p-1">{this.state.playerId2.name}</div>
 										<div className="text-center">
 											<img
@@ -564,7 +564,7 @@ export class Match extends React.Component {
 							</div>
 							<div className="col-4">
 								{this.state.playerId1 && (
-									<div className="card text-center text-light playedCard">
+									<div className="card  text-center text-light playedCard">
 										<div className="card-header p-1">{this.state.playerId1.name}</div>
 										<div className="text-center">
 											<img
@@ -652,7 +652,7 @@ export class Match extends React.Component {
 										// console.log("###", item.player_id);
 										return (
 											<div key={index} className="col-4">
-												<div className="card text-center text-light">
+												<div className="card cardTeam text-center text-light">
 													<div>{item.teamLogo}</div>
 													<div className="card-header ">{item.name}</div>
 													<div className="text-center">
