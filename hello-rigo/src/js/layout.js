@@ -26,24 +26,22 @@ export class Layout extends React.Component {
 		const basename = process.env.BASENAME || "";
 
 		return (
-			<div className="d-flex flex-column h-100">
-				<BrowserRouter basename={basename}>
-					<ScrollToTop>
-						<Switch>
-							<Route exact path="/" component={LandingPage} />
-							<Route exact path="/login" component={Login} />
-							<Route exact path="/signup" component={Signup} />
-							<Route exact path="/PickTeam" component={PickTeam} />
-							<Route exact path="/juventusGame" component={JuventusGame} />
-							<Route exact path="/match" component={Match} />
-							<Route exact path="/Fight" component={Fight} />
-							<Route exact path="/barcelonaGame" component={barcelonaGame} />
-							<Route exact path="/single/:theid" component={Single} />
-							<Route render={() => <h1>Not found!</h1>} />
-						</Switch>
-					</ScrollToTop>
-				</BrowserRouter>
-			</div>
+			<BrowserRouter basename={basename}>
+				<ScrollToTop>
+					<Switch>
+						<Route exact path="/" component={LandingPage} />
+						<Route exact path="/login" component={Login} />
+						<Route exact path="/signup" component={Signup} />
+						<Route exact path="/PickTeam" component={PickTeam} />
+						<Route exact path="/juventusGame" component={JuventusGame} />
+						<Route exact path="/match" component={Match} />
+						<Route exact path="/Fight" component={Fight} />
+						<Route exact path="/barcelonaGame" component={barcelonaGame} />
+						<Route exact path="/single/:theid" component={Single} />
+						<Route render={() => <h1>Not found!</h1>} />
+					</Switch>
+				</ScrollToTop>
+			</BrowserRouter>
 		);
 	}
 }

@@ -377,6 +377,9 @@ const getState = ({ getStore, setStore }) => {
 		},
 
 		actions: {
+			restartButton() {
+				setStore({ teamTwo: null, teamOne: null });
+			},
 			logout: () => {
 				let store = getStore();
 				setStore({ token: null });
