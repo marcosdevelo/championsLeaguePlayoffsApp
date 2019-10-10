@@ -427,6 +427,7 @@ export class Match extends React.Component {
 		// }
 		return (
 			<React.Fragment>
+				<div className="row generalRow"></div>
 				{/* <div className="row firstRow">
 					<div className="col-4 float-left">logo</div>
 					<div className="col-4 float-right justify-content-center">KICK OFF!!!</div>
@@ -456,9 +457,9 @@ export class Match extends React.Component {
 														/>
 													</div>
 													<div className="card-body">
-														<div>{item.position}</div>
-														<div>{item.attack}</div>
-														<div>{item.defense}</div>
+														<div>{"Position:" + item.position}</div>
+														<div>{"Attack:" + item.attack}</div>
+														<div>{"Defense:" + item.defense}</div>
 													</div>
 													<div className="card-footer bubu">
 														<button
@@ -663,9 +664,9 @@ export class Match extends React.Component {
 														/>
 													</div>
 													<div className="card-body">
-														<div>{item.position}</div>
-														<div>{item.attack}</div>
-														<div>{item.defense}</div>
+														<div>{"Position:" + item.position}</div>
+														<div>{"Attack:" + item.attack}</div>
+														<div>{"Defense:" + item.defense}</div>
 													</div>
 													<div className="card-footer">
 														<button
@@ -688,6 +689,7 @@ export class Match extends React.Component {
 						</div>
 					</div>
 				</div>
+				<div className="row generalRow"></div>
 			</React.Fragment>
 		);
 	}
